@@ -1,9 +1,7 @@
-import * as express from 'express';
+import 'es6-shim';
+import 'reflect-metadata';
+import { createExpressServer } from 'routing-controllers';
+import './Controllers/PokemonController';
 
-let app: express.Application = express();
-
-app.get('/', (req: express.Request, res: express.Response) => {
-    res.send('Hallo');
-});
-
-app.listen('8080');
+let app = createExpressServer();
+app.listen(3000);
