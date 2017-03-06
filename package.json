@@ -1,0 +1,33 @@
+{
+  "name": "pokemongo-web-api",
+  "version": "0.0.1",
+  "description": "A pokemongo web api similar to the pokéapi (https://pokeapi.co)",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/tsc ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunnerLivio/pokemongo-web-api.git"
+  },
+  "keywords": [
+    "pokemongo",
+    "webapi"
+  ],
+  "author": "Livio Brunner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrunnerLivio/pokemongo-web-api/issues"
+  },
+  "homepage": "https://github.com/BrunnerLivio/pokemongo-web-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.0.35",
+    "@types/node": "^7.0.5",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.2.1"
+  },
+  "dependencies": {
+    "express": "^4.15.1"
+  }
+}
