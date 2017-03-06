@@ -4,7 +4,7 @@
   "description": "A pokemongo web api similar to the pokéapi (https://pokeapi.co)",
   "main": "build/index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "tsc && webpack",
     "start": "npm run build && node build/index.js"
   },
   "repository": {
