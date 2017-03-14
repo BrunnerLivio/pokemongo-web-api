@@ -1,42 +1,19 @@
-import { JsonController, Param, Body, Get, Post, Put, Delete, Req, Res } from "routing-controllers";
+import { JsonController, Param, Body, Get, EmptyResultCode, Delete, Req, Res } from "routing-controllers";
 import * as request from 'request';
 import { Promise } from 'es6-shim';
 @JsonController()
 export class PokemonController {
     @Get("/pokemon")
     getAll( @Req() req, @Res() res) {
-        var regexp = new RegExp('^(V[0-9]+_POKEMON_?.*)', 'g');
-
-        return new Promise<any>((ok, fail) => {
-            request.get('https://raw.githubusercontent.com/BrunnerLivio/pokemongo-game-master/master/versions/latest/GAME_MASTER.json', (error, response, body) => {
-                let game_master: any = JSON.parse(body)
-                let pokemons: Object[] =
-                    game_master
-                        .itemTemplates
-                        .filter(item => regexp.test(item.templateId));
-                ok(pokemons);
-            });
-        });
+        const pokemons = require('../Data/Pokemon.json');
+        return pokemons;
     }
 
     @Get("/pokemon/:id")
-    getOne( @Param("id") id: number) {
-        return "This action returns user #" + id;
+    @EmptyResultCode(404)
+    getOne( @Param("id") id: string) {
+        const allPokemons = require('../Data/Pokemon.json');
+        let filteredPokemons = allPokemons.filter(pokemon => pokemon.id.toLowerCase() === id.toLowerCase())[0];
+        return filteredPokemons;
     }
-
-    @Post("/pokemon")
-    post( @Body() user: any) {
-        return "Saving user...";
-    }
-
-    @Put("/pokemon/:id")
-    put( @Param("id") id: number, @Body() user: any) {
-        return "Updating a user...";
-    }
-
-    @Delete("/pokemon/:id")
-    remove( @Param("id") id: number) {
-        return "Removing user...";
-    }
-
 }

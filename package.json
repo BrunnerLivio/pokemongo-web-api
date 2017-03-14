@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "tsc && webpack",
 		"start": "npm run build && node build/index.js",
-		"fetch-game-master": "node bin/get-latest-game-master.js"
+		"fetch-data": "node bin/get-data.js"
 	},
 	"repository": {
 		"type": "git",
