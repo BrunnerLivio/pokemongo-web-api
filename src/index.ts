@@ -4,4 +4,4 @@ import { createExpressServer } from 'routing-controllers';
 import './Controllers/PokemonController';
 
 let app = createExpressServer();
-app.listen(3000);
+app.listen(8080);
