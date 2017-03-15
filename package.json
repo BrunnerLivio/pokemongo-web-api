@@ -1,6 +1,6 @@
 {
   "name": "pokemongo-web-api",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A pokemongo web api similar to the pokéapi (https://pokeapi.co)",
   "main": "build/index.js",
   "scripts": {
