@@ -4,7 +4,9 @@ import { createExpressServer } from 'routing-controllers';
 import './Controllers/PokemonController';
 import * as chalk from 'chalk';
 
-let app = createExpressServer();
-console.log(`Listening on port ${chalk.green('8080')}`);
+const PORT = (process.env.PORT || 5000);
 
-app.listen(8080);
+let app = createExpressServer();
+console.log(`Listening on port ${chalk.green(PORT)}`);
+
+app.listen(PORT);
