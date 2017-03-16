@@ -5,10 +5,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>POGO API</title>
 </head>
 
 <body>
+	<nav>
+		<div class="nav-wrapper">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="documentation.html">Documentation</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</div>
+	</nav>
+	<header class="valign-wrapper">
+		<section class="valign">
+			<h1>POGO API</h1>
+			<p>The RESTful Pokémon GO API</p>
+		</section>
+	</header>
+	<main class="container z-depth-2">
+		<section>
+			<h2 class="center-align col s12">Try it out now!</h2>
+			<div class="api-preview-input">
+				<span class="input-addon valign-wrapper">
+					<span id="api-url" class="valign"></span>
+				</span>
+				<input type="text" placeholer="pokemon/BULBASAUR" />
+			</div>
+			<pre class="api-output" id="preview-output">
+
+			</pre>
+		</section>
+	</main>
 	<script src="build/app.js"></script>
 </body>
 

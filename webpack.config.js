@@ -20,21 +20,26 @@ module.exports = [{
 	},
 	module: {
 		loaders: [{
-			test: /\.ts$/,
-			loader: 'ts-loader'
-		}],
-		rules: [{
-			test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-			use: ['url-loader?limit=80000']
-		}, {
-			test: /\.css$/,
-			use: ['style-loader', 'css-loader']
-		}]
+				test: /\.ts$/,
+				loader: 'ts-loader'
+			},
+			{
+				test: /\.scss$/,
+				loaders: ['style-loader', 'css-loader', 'sass-loader']
+			},
+			{
+				test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loaders: ['url-loader?limit=80000']
+			}, {
+				test: /\.css$/,
+				loaders: ['style-loader', 'css-loader']
+			}
+		],
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
-			$: "jquery",
-			jQuery: "jquery"
+			$: 'jquery',
+			jQuery: 'jquery'
 		})
 	],
 }, {

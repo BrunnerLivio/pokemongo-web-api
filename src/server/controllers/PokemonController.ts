@@ -4,13 +4,13 @@ import * as request from 'request';
 import { Promise } from 'es6-shim';
 @JsonController()
 export class PokemonController {
-    @Get("/api/pokemon")
+    @Get("/api/v1/pokemon")
     getAll( @Req() req, @Res() res) {
         const pokemons = require('../../shared/Pokemon.json');
         return pokemons;
     }
 
-    @Get("/api/pokemon/:id")
+    @Get("/api/v1/pokemon/:id")
     @EmptyResultCode(404)
     getOne( @Param("id") id: string) {
         const allPokemons = require('../../shared/Pokemon.json');
