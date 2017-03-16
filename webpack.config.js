@@ -11,7 +11,33 @@ fs.readdirSync('node_modules')
 		nodeModules[mod] = 'commonjs ' + mod;
 	});
 
-module.exports = {
+module.exports = [{
+	entry: './src/client/app/app.ts',
+	devtool: 'source-map',
+	output: {
+		path: path.join(__dirname, './src/client/build'),
+		filename: 'app.js'
+	},
+	module: {
+		loaders: [{
+			test: /\.ts$/,
+			loader: 'ts-loader'
+		}],
+		rules: [{
+			test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+			use: ['url-loader?limit=80000']
+		}, {
+			test: /\.css$/,
+			use: ['style-loader', 'css-loader']
+		}]
+	},
+	plugins: [
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery"
+		})
+	],
+}, {
 	entry: './src/index.ts',
 	target: 'node',
 	devtool: 'source-map',
@@ -31,5 +57,5 @@ module.exports = {
 			'*': 'http://localhost:8080'
 		}
 	},
-    externals: nodeModules
-};
+	externals: nodeModules
+}];
