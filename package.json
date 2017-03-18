@@ -22,7 +22,9 @@
     "url": "https://github.com/BrunnerLivio/pokemongo-web-api/issues"
   },
   "homepage": "https://github.com/BrunnerLivio/pokemongo-web-api#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-dev-server": "^2.4.2"
+  },
   "dependencies": {
     "@types/body-parser": "1.16.0",
     "@types/chalk": "^0.4.31",
