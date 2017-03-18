@@ -12,6 +12,6 @@ $(document).ready(function () {
     $('#api-url').text(apiurl);
 
     $.get(apiurl + 'pokemon/BULBASAUR', (data) => {
-        $('#preview-output').text(JSON.stringify(data));
+        $('#preview-output').text(JSON.stringify(data, null, 4));
     });
 });
