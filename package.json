@@ -23,8 +23,7 @@
   },
   "homepage": "https://github.com/BrunnerLivio/pokemongo-web-api#readme",
   "devDependencies": {
-    "webpack-dev-server": "^2.4.2",
-    "yarn": "^0.21.3"
+    "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
     "@types/body-parser": "1.16.0",
