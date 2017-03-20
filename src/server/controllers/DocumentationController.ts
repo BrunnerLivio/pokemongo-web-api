@@ -6,7 +6,19 @@ import { Promise } from 'es6-shim';
 export class DocumentationController {
     @Get('/')
     @Render('index')
-    getAll( @Req() req, @Res() res) {
-        
+    index( @Req() req, @Res() res) {
+
+    }
+
+    @Get('/docs')
+    @Render('docs')
+    docs( @Req() req, @Res() res) {
+
+    }
+
+    @Get('/about')
+    @Render('about')
+    about( @Req() req, @Res() res) {
+
     }
 }

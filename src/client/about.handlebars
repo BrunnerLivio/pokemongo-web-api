@@ -1,0 +1,41 @@
+<section>
+    <h2>
+		What is this?
+	</h2>
+	<p>
+		This is a RESTful API, which reads its data from the so called <a href="https://github.com/BrunnerLivio/pokemongo-game-master">GAME_MASTER file</a>.
+		The data from GAME_MASTER gets transformed using the Github repository <a href="https://github.com/BrunnerLivio/pokemongo-data-normalizer">pokemongo-data-normalizer</a>		to a better processable state.
+	</p>
+</section>
+<section>
+	<h2>
+		Contribute
+	</h2>
+	<p>
+		This repository heavily relies on the help of the community. This API is splitted into 3 main repositories:
+		<ul>
+			<li><a href="https://github.com/BrunnerLivio/pokemongo-game-master">pokemongo-game-master</a> - The raw GAME_MASTER data</li>
+			<li><a href="https://github.com/BrunnerLivio/pokemongo-data-normalizer">pokemongo-data-normalizer</a> - The transformed GAME_MASTER
+				data to a better processable state</li>
+			<li><a href="https://github.com/BrunnerLivio/pokemongo-web-api">pokemongo-web-api</a> - The final Web endpoint which exposes
+				the transformed & processed data to the web</li>
+		</ul>
+	</p>
+</section>
+<section>
+    <h2>What is it built with?</h2>
+    <strong>Client</strong>
+    <ul>
+        <li><a href="https://handlebarsjs.com/" target="_blank">HandlebarsJS</a> as view engine</li>
+        <li><a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> instead JavaScript</li>
+        <li><a href="https://sass-lang.com/" target="_blank">Sass</a> instead CSS</li>
+        <li><a href="https://github.com/webpack/webpack" target="_blank">Webpack</a> for precompiling and bundling</li>
+    </ul>
+    <strong>Server</strong>
+    <ul>
+        <li><a href="http://expressjs.com/" target="_blank">ExpressJS</a> as web application framework</li>
+        <li><a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> instead JavaScript</li>
+        <li><a href="https://github.com/pleerock/routing-controllers/" target="_blank">Routing Controllers</a> for better integration of ExpressJS when using TypeScript</li>
+        <li><a href="https://github.com/webpack/webpack" target="_blank">Webpack</a> for precompiling and bundling</li>
+    </ul>
+</section>
