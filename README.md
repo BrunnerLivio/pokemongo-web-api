@@ -6,6 +6,8 @@ A RESTful API for Pokémon GO
 
 License: [BSD](https://github.com/BrunnerLivio/pokemongo-web-api/blob/master/LICENSE.md)
 
+![Version 0.1.1 Preview](https://raw.githubusercontent.com/BrunnerLivio/pokemongo-web-api/master/.github/version_0.1.1.png)
+
 # Installation
 
 ## Preqrequisites
