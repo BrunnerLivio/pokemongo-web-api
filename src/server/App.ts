@@ -3,6 +3,7 @@ import * as path from 'path';
 import 'reflect-metadata';
 
 import './controllers/PokemonController';
+import './controllers/MoveController';
 
 import { useExpressServer } from 'routing-controllers';
 import * as express from 'express';
