@@ -1,0 +1,35 @@
+<section>
+
+	<h2 class="center-align col s12">Try it out now!</h2>
+	<div class="api-preview-input">
+		<span class="input-addon valign-wrapper">
+					<span id="api-url" class="valign"></span>
+		</span>
+		<input type="text" placeholder="pokemon/BULBASAUR" />
+	</div>
+	<pre class="api-output">
+				<code id="preview-output" class="json"></code>
+			</pre>
+</section>
+<section>
+	<h2>
+		What is this?
+	</h2>
+	<p>
+		This is a RESTful API, which reads its data from the so called <a href="https://github.com/BrunnerLivio/pokemongo-game-master">GAME_MASTER file</a>.
+		The data from GAME_MASTER gets transformed using the Github repository <a href="https://github.com/BrunnerLivio/pokemongo-data-normalizer">pokemongo-data-normalizer</a>		to a better processable state.
+	</p>
+	<h2>
+		Contribute
+	</h2>
+	<p>
+		This repository heavily relies on the help of the community. This API is splitted into 3 main repositories:
+		<ul>
+			<li><a href="https://github.com/BrunnerLivio/pokemongo-game-master">pokemongo-game-master</a> - The raw GAME_MASTER data</li>
+			<li><a href="https://github.com/BrunnerLivio/pokemongo-data-normalizer">pokemongo-data-normalizer</a> - The transformed GAME_MASTER
+				data to a better processable state</li>
+			<li><a href="https://github.com/BrunnerLivio/pokemongo-web-api">pokemongo-web-api</a> - The final Web endpoint which exposes
+				the transformed & processed data to the web</li>
+		</ul>
+	</p>
+</section>

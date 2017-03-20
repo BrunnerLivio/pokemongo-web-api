@@ -4,10 +4,12 @@ import 'reflect-metadata';
 
 import './controllers/PokemonController';
 import './controllers/MoveController';
+import './controllers/DocumentationController';
 
 import { useExpressServer } from 'routing-controllers';
 import * as express from 'express';
 import * as chalk from 'chalk';
+import * as exphbs from 'express-handlebars';
 
 export class App {
 
@@ -23,7 +25,12 @@ export class App {
     }
 
     private middleware(): void {
-        this.app.use(express.static(path.join(path.resolve(''), 'src/client')));
+        this.app.set('views', path.join(process.cwd(), '/src/client'));
+        this.app.set('view engine', 'handlebars');
+        this.app.engine('handlebars', exphbs({
+            layoutsDir: 'src/client/layout',
+            defaultLayout: 'default'
+        }));
+        this.app.use('/build', express.static(path.join(process.cwd(), 'src/client/build')));
     }
-
 }
