@@ -1,6 +1,7 @@
 # pokemongo-web-api
 
 [![ghit.me](https://ghit.me/badge.svg?repo=BrunnerLivio/pokemongo-web-api)](https://ghit.me/repo/BrunnerLivio/pokemongo-web-api)
+[![Online Users in pokemongo-web-api Discord Server](https://discordapp.com/api/guilds/293475492382638081/embed.png)](https://discord.gg/34RyR7P)
 
 A RESTful API for Pokémon GO
 
