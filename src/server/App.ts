@@ -2,9 +2,9 @@ import { log } from 'util';
 import * as path from 'path';
 import 'reflect-metadata';
 
-import './controllers/PokemonController';
-import './controllers/MoveController';
-import './controllers/DocumentationController';
+import './components/Pokemon/PokemonController';
+import './components/Move/MoveController';
+import './components/Documentation/DocumentationController';
 
 import { useExpressServer } from 'routing-controllers';
 import * as express from 'express';
@@ -14,14 +14,14 @@ import * as exphbs from 'express-handlebars';
 export class App {
 
     private app: express.Application;
-
+    private PORT: number;
     constructor() {
-        const PORT = (process.env.PORT || 5000);
+        this.PORT = (process.env.PORT || 5000);
         this.app = express();
         this.middleware();
         useExpressServer(this.app);
-        this.app.listen(PORT);
-        console.log(`Listening on port ${chalk.green(PORT)}`);
+        this.app.listen(this.PORT);
+        console.log(`Listening on port ${chalk.green(this.PORT.toString())}`);
     }
 
     private middleware(): void {
