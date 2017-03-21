@@ -10,13 +10,14 @@ import { useExpressServer } from 'routing-controllers';
 import * as express from 'express';
 import * as chalk from 'chalk';
 import * as exphbs from 'express-handlebars';
+import APP_SETTINGS from './AppSettings';
 
 export class App {
 
     private app: express.Application;
     private PORT: number;
     constructor() {
-        this.PORT = (process.env.PORT || 5000);
+        this.PORT = (process.env.PORT || APP_SETTINGS.server.defaultPort);
         this.app = express();
         this.middleware();
         useExpressServer(this.app);
