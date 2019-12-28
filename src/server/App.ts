@@ -17,7 +17,7 @@ export class App {
     private app: express.Application;
     private PORT: number;
     constructor() {
-        this.PORT = (process.env.PORT || APP_SETTINGS.server.defaultPort);
+        this.PORT = parseInt(process.env.PORT) || APP_SETTINGS.server.defaultPort;
         this.app = express();
         this.middleware();
         useExpressServer(this.app);

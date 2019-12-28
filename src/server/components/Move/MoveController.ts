@@ -10,8 +10,8 @@ export class MoveController {
     @Get('/api/v1/move')
     getAll( @Req() req: Request, @Res() res) {
         return new MoveService().getAll({
-            limit: req.params.limit,
-            offest: req.params.offset
+            limit: parseInt(req.params.limit),
+            offest: parseInt(req.params.offset)
         });
     }
 
